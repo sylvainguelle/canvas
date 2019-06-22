@@ -1,6 +1,6 @@
 	const canvas = document.createElement("canvas");
-	canvas.height = 150;
-	canvas.width = 200;
+	canvas.height = 200;
+	canvas.width = 300;
 	canvas.style.border = "1px solid black";
 	canvas.style.backgroundColor = "white";
 	//definition contexte 2d canvas
