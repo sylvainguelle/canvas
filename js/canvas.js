@@ -26,20 +26,20 @@
 
 	//evenement au mouvement de la souris pour avoir la position du curseur
 	canvas.addEventListener("mousemove", function(e) {
-		mousePos.x = e.clientX;
-		mousePos.y = e.clientY;
+		mousePos.x = e.clientX - canvas.getBoundingClientRect().left;
+		mousePos.y = e.clientY - canvas.getBoundingClientRect().top;
 		drawLine();
-		lastPos.x = e.clientX;
-		lastPos.y = e.clientY;
+		lastPos.x = e.clientX - canvas.getBoundingClientRect().left;
+		lastPos.y = e.clientY  - canvas.getBoundingClientRect().top;
 	});
 
 	//evenement tactile au mouvement pour avoir la position du doigt
 	canvas.addEventListener("touchmove",function(e) {
-		mousePos.x = e.touches[0].clientX;
-		mousePos.y = e.touches[0].clientY;
+		mousePos.x = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+		mousePos.y = e.touches[0].clientY - canvas.getBoundingClientRect().top;
 		drawLine();
-		lastPos.x = e.touches[0].clientX;
-		lastPos.y = e.touches[0].clientY;
+		lastPos.x = e.touches[0].clientX - canvas.getBoundingClientRect().left;
+		lastPos.y = e.touches[0].clientY - canvas.getBoundingClientRect().top;
 		e.preventDefault;
 	});
 
