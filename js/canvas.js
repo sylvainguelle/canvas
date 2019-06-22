@@ -40,6 +40,7 @@
 		drawLine();
 		lastPos.x = e.touches[0].clientX;
 		lastPos.y = e.touches[0].clientY;
+		e.preventDefault;
 	});
 
 	canvas.addEventListener("mousedown", function() {
@@ -47,6 +48,8 @@
 	});
 
 	canvas.addEventListener("touchstart", function(e) {
+		lastPos.x = e.touches[0].clientX;
+		lastPos.y = e.touches[0].clientY;
 		drawing = true;
 		e.preventDefault;
 	});
@@ -57,6 +60,7 @@
 
 	canvas.addEventListener("touchend", function(e) {
 		drawing = false;
+		e.preventDefault;
 	});
 
 function drawLine() {
